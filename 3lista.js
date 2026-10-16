@@ -1,0 +1,11 @@
+const carrinho = [
+  { item: "Teclado", preco: 150, quantidade: 1 },
+  { item: "Mouse", preco: 80, quantidade: 2 },
+  { item: "Cabo USB", preco: 25, quantidade: 3 }
+]
+
+const total = carrinho.reduce((acc, produto) => {
+  return acc + produto.preco * produto.quantidade;
+}, 0)
+
+console.log(`Total do carrinho: R$${total}`);
